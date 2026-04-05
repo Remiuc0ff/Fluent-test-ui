@@ -4,9 +4,9 @@ local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercon
  
 local Window = Library:CreateWindow{
     Title = `Fluent {Library.Version}`,
-    SubTitle = "by Actual Master Oogway",
+    SubTitle = "by Pidar",
     TabWidth = 160,
-    Size = UDim2.fromOffset(830, 525),
+    Size = UDim2.fromOffset(1030, 825),
     Resize = true, -- Resize this ^ Size according to a 1920x1080 screen, good for mobile users but may look weird on some devices
     MinSize = Vector2.new(470, 380),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
