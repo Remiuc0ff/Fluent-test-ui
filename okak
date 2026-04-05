@@ -4,9 +4,9 @@ local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercon
  
 local Window = Library:CreateWindow{
     Title = `Fluent {Library.Version}`,
-    SubTitle = "by point",
+    SubTitle = "by Actual Master Oogway",
     TabWidth = 160,
-    Size = UDim2.fromOffset(1030, 825),
+    Size = UDim2.fromOffset(830, 525),
     Resize = true, -- Resize this ^ Size according to a 1920x1080 screen, good for mobile users but may look weird on some devices
     MinSize = Vector2.new(470, 380),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -248,3 +248,27 @@ Tabs.Main:CreateButton{
         for i = 1, 1000 do
             Values[i] = i
         end
+
+        Tabs.Main:AddDropdown("BIGDropdown", {
+            Title = "Big Dropdown",
+            Values = Values,
+            Multi = false,
+            Default = 1,
+        })
+    end
+}
+
+SaveManager:SetLibrary(Library)
+InterfaceManager:SetLibrary(Library)
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+Window:SelectTab(1)
+
+Library:Notify{
+    Title = "Fluent",
+    Content = "The script has been loaded.",
+    Duration = 8
+}
+SaveManager:LoadAutoloadConfig()
